@@ -1,281 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Papa ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Papa ❤️</title>
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fff5f8);
-    color: #5b2638;
-    text-align: center;
-    overflow-x: hidden;
-}
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: linear-gradient(135deg, #ffe4ec, #fff5f8, #ffd6e3);
+            color: #5b2638;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px 18px 60px;
-}
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 18px 60px;
+            text-align: center;
+        }
 
-/* Floating hearts */
-.heart {
-    position: fixed;
-    bottom: -30px;
-    font-size: 22px;
-    animation: float 7s linear infinite;
-    opacity: 0.7;
-    z-index: 0;
-}
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 25px;
+            animation: floatUp 8s linear infinite;
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 0;
+        }
 
-.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
-.heart:nth-child(2) { left: 30%; animation-delay: 2s; }
-.heart:nth-child(3) { left: 55%; animation-delay: 4s; }
-.heart:nth-child(4) { left: 80%; animation-delay: 1s; }
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
 
-@keyframes float {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    20% { opacity: 0.8; }
-    100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-    }
-}
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+        }
 
-.hero {
-    position: relative;
-    z-index: 1;
-    padding: 60px 15px 35px;
-}
+        .heart:nth-child(3) {
+            left: 50%;
+            animation-delay: 4s;
+        }
 
-.small {
-    letter-spacing: 4px;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #a0526b;
-}
+        .heart:nth-child(4) {
+            left: 70%;
+            animation-delay: 1s;
+        }
 
-h1 {
-    font-size: clamp(45px, 10vw, 85px);
-    margin: 15px 0 5px;
-    color: #8f304f;
-}
+        .heart:nth-child(5) {
+            left: 90%;
+            animation-delay: 3s;
+        }
 
-.nickname {
-    font-size: clamp(28px, 7vw, 55px);
-    font-style: italic;
-    color: #c04b70;
-}
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
 
-.date {
-    margin-top: 15px;
-    font-size: 18px;
-}
+            20% {
+                opacity: 0.8;
+            }
 
-.divider {
-    width: 90px;
-    height: 2px;
-    background: #c04b70;
-    margin: 25px auto;
-}
+            100% {
+                transform: translateY(-110vh) scale(1.5);
+                opacity: 0;
+            }
+        }
 
-.message {
-    background: rgba(255,255,255,0.75);
-    border-radius: 25px;
-    padding: 30px 25px;
-    margin: 20px auto 40px;
-    box-shadow: 0 10px 30px rgba(120,40,70,0.12);
-    position: relative;
-    z-index: 1;
-}
+        .hero {
+            position: relative;
+            z-index: 1;
+            padding: 55px 20px 35px;
+        }
 
-.message h2 {
-    font-size: 30px;
-    margin-bottom: 18px;
-    color: #8f304f;
-}
+        .small {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
 
-.message p {
-    font-size: 18px;
-    line-height: 1.9;
-}
+        h1 {
+            font-size: clamp(42px, 10vw, 78px);
+            color: #a8325c;
+            margin-bottom: 12px;
+            text-shadow: 2px 2px 8px rgba(168, 50, 92, 0.15);
+        }
 
-/* <div class="photo">
-    <img src="IMG_20260210_201729_153.jpg" alt="Our memory">
-</div>
+        .nickname {
+            font-size: clamp(28px, 7vw, 48px);
+            color: #7d2444;
+            margin-bottom: 18px;
+        }
 
-<div class="photo">
-    <img src="IMG_20260210_201814_898.jpg" alt="Our memory">
-</div>
+        .date {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
 
-<div class="photo">
-    <img src="IMG_20260223_205320_669.jpg" alt="Our memory">
-</div>
+        .message {
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 25px;
+            padding: 30px 24px;
+            margin: 25px auto 40px;
+            max-width: 720px;
+            box-shadow: 0 10px 30px rgba(91, 38, 56, 0.12);
+            line-height: 1.8;
+            font-size: 18px;
+        }
 
-.love {
-    margin: 45px 0 20px;
-    font-size: 28px;
-    color: #a83256;
-    position: relative;
-    z-index: 1;
-}
+        .message h2 {
+            color: #a8325c;
+            margin-bottom: 18px;
+            font-size: 30px;
+        }
 
-.quote {
-    font-style: italic;
-    font-size: 19px;
-    line-height: 1.7;
-    margin: 20px auto;
-    max-width: 650px;
-}
+        .gallery-title {
+            font-size: 32px;
+            color: #a8325c;
+            margin: 35px 0 22px;
+        }
 
-.footer {
-    margin-top: 45px;
-    font-size: 15px;
-    color: #9a6274;
-}
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
 
-/* Mobile */
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
+        .photo {
+            background: white;
+            padding: 10px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(91, 38, 56, 0.15);
+            transition: transform 0.3s ease;
+        }
 
-    .
+        .photo:hover {
+            transform: translateY(-6px) rotate(1deg);
+        }
 
-message {
-        padding: 25px 18px;
-    }
+        .photo img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
 
-    .message p {
-        font-size: 16px;
-    }
-}
-</style>
+        .love {
+            position: relative;
+            z-index: 1;
+            margin-top: 45px;
+            padding: 30px 20px;
+        }
+
+        .love p {
+            font-size: 23px;
+            line-height: 1.7;
+            color: #7d2444;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            position: relative;
+            z-index: 1;
+            margin-top: 45px;
+            font-size: 15px;
+            opacity: 0.75;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px 12px 45px;
+            }
+
+            .hero {
+                padding-top: 40px;
+            }
+
+            .message {
+                padding: 25px 18px;
+                font-size: 16px;
+            }
+
+            .photo img {
+                height: 280px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- Floating hearts -->
-<div class="heart">❤️</div>
-<div class="heart">💕</div>
-<div class="heart">❤️</div>
-<div class="heart">💗</div>
+    <!-- Floating hearts -->
+    <div class="heart">❤️</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💖</div>
+    <div class="heart">💞</div>
 
-<div class="container">
+    <div class="container">
 
-    <section class="hero">
-        <div class="small">A special day for someone special</div>
+        <!-- Birthday greeting -->
+        <section class="hero">
+            <div class="small">A SPECIAL DAY FOR SOMEONE SPECIAL</div>
 
-        <h1>Happy Birthday</h1>
+            <h1>Happy Birthday</h1>
 
-        <div class="nickname">Papa ❤️</div>
+            <div class="nickname">Papa ❤️</div>
 
-        <div class="divider"></div>
+            <div class="date">
+                September 24, 1997
+            </div>
+        </section>
 
-        <div class="date">
-            September 24, 1997 🎂
-        </div>
-    </section>
+        <!-- Birthday message -->
+        <section class="message">
+            <h2>For My Papa 💕</h2>
 
+            <p>
+                Happy Birthday to the person who holds such a special
+                place in my heart. ❤️
+            </p>
 
-    <section class="message">
+            <br>
 
-        <h2>To My Papa 💕</h2>
+            <p>
+                Papa, I hope your birthday is filled with happiness,
+                beautiful memories, laughter, and all the love you deserve.
+            </p>
 
-        <p>
-            Happy Birthday to the most special person in my heart. ❤️
-        </p>
+            <br>
 
-        <br>
+            <p>
+                Thank you for being such a special person in my life.
+                Every memory with you is something I will always treasure.
+            </p>
 
-        <p>
-            I hope your birthday is filled with happiness, love,
-            beautiful memories, and everything that makes you smile.
-        </p>
+            <br>
 
-        <br>
+            <p>
+                May this new year of your life bring you closer to your
+                dreams and fill your days with peace, joy, and love.
+            </p>
 
-        <p>
-            Thank you for being such an important part of my life.
-            No matter where life takes us, I will always treasure
-            the beautiful memories we have shared together.
-        </p>
+            <br>
 
-        <br>
+            <p>
+                No matter how many birthdays come and go, I will always
+                be grateful for the memories we have shared. 💗
+            </p>
+        </section>
 
-        <p>
-            May this new year of your life bring you success,
-            peace, good health, and many reasons to smile.
-        </p>
+        <!-- Photo gallery -->
+        <h2 class="gallery-title">Our Beautiful Memories 📸</h2>
 
-        <br>
+        <section class="gallery">
 
-        <p>
-            <strong>Happy Birthday, Papa. ❤️</strong>
-        </p>
+            <div class="photo">
+                <img src="IMG_20260210_201729_153.jpg" alt="Our memory">
+            </div>
 
-    </section>
+            <div class="photo">
+                <img src="IMG_20260210_201814_898.jpg" alt="Our memory">
+            </div>
 
+            <div class="photo">
+                <img src="IMG_20260223_205320_669.jpg" alt="Our memory">
+            </div>
 
-    <h2 class="gallery-title">Our Memories 📸💕</h2>
+        </section>
 
-    <section class="gallery">
+        <!-- Final message -->
+        <section class="love">
+            <p>
+                "Happy Birthday, Papa. ❤️
+                You are a beautiful part of my memories,
+                and I hope your special day is as wonderful as you are."
+            </p>
 
-        <!-- Replace these filenames with your photo filenames -->
-        <div class="photo">
-            <img src="photo1.jpg" alt="Our memory">
-        </div>
+            <div class="signature">
+                With love, always 💕
+            </div>
+        </section>
 
-        <div class="photo">
-            <img src="photo2.jpg" alt="Our memory">
-        </div>
+        <footer>
+            Made with ❤️ especially for Papa
+        </footer>
 
-        <div class="photo">
-            <img src="photo3.jpg" alt="Our memory">
-        </div>
-
-        <div class="photo">
-            <img src="photo4.jpg" alt="Our memory">
-        </div>
-
-        <div class="photo">
-            <img src="photo5.jpg" alt="Our memory">
-        </div>
-
-    </section>
-
-
-    <section class="love">
-        <div>❤️</div>
-
-        <p class="quote">
-            "Some people come into our lives and make
-            our hearts a little happier just by being there."
-        </p>
-
-        <div>💕</div>
-    </section>
-
-
-    <div class="footer">
-        Made with love, especially for Papa ❤️<br>
-        September 24 🎂
     </div>
-
-</div>
 
 </body>
 </html>
-
-
